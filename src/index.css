@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;;
+  margin: 0;
+  padding: 0;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue rgb(0, 0, 0);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 2px solid rgb(255, 255, 255);
+}
