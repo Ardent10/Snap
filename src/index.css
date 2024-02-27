@@ -2,21 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-html,body {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;;
+html,
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: blue rgb(0, 0, 0);
-}
-
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 12px;
+  scrollbar-color: blue rgb(255, 255, 255);
 }
 
 *::-webkit-scrollbar-track {

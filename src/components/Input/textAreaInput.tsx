@@ -8,6 +8,7 @@ interface props {
   placeholder?: string;
   disable?: boolean;
   control: Control<FieldValues>;
+  showCopyIcon?: boolean;
 }
 
 export default function TextAreaInput({
@@ -17,6 +18,7 @@ export default function TextAreaInput({
   label,
   required,
   placeholder,
+  showCopyIcon,
 }: props) {
   return (
     <div className="h-auto flex-1">
@@ -42,6 +44,11 @@ export default function TextAreaInput({
                 disabled={disable}
                 placeholder={placeholder}
               />
+              {showCopyIcon && (
+                <div className="cursor-pointer bg-gray-200 rounded-e-md absolute top-0 right-0 px-2 py-2 hover:bg-gray-100">
+                  <img src="./assets/copy.svg" width="20px" alt="copy" />
+                </div>
+              )}
               <Error error={error} />
             </>
           );

@@ -10,6 +10,7 @@ interface InputFieldProps {
   required?: boolean;
   control: Control<FieldValues>;
   className?: string;
+  showCopyIcon?: boolean;
 }
 
 export default function InputField({
@@ -20,11 +21,21 @@ export default function InputField({
   required,
   control,
   className,
+  showCopyIcon,
 }: InputFieldProps) {
   const [showPassword, setShowPassword] = useState(false);
 
   function togglePassword() {
     setShowPassword((prev) => !prev);
+  }
+
+  function copyToClipboard(value: string | number | Date) {
+    navigator.clipboard
+      .writeText(JSON.stringify(value))
+      .then(() => console.log("Text copied to clipboard"))
+      .catch((error) =>
+        console.error("Failed to copy text to clipboard:", error)
+      );
   }
 
   return (
@@ -41,7 +52,10 @@ export default function InputField({
       <Controller
         control={control}
         name={name}
-        render={({ field: { onChange, onBlur }, fieldState: { error } }) => (
+        render={({
+          field: { onChange, onBlur, value },
+          fieldState: { error },
+        }) => (
           <div className="relative">
             <input
               id={label}
@@ -58,9 +72,9 @@ export default function InputField({
               onBlur={onBlur}
             />
 
-            {type === "password" && (
+            {type === "password" ? (
               <div
-                className="cursor-pointer bg-gray-200 rounded-e-md absolute top-0 right-0 px-2 py-1.5 hover:bg-gray-100"
+                className="cursor-pointer bg-gray-200 rounded-e-md absolute top-0 right-0 px-2 py-2 hover:bg-gray-100"
                 onClick={togglePassword}
               >
                 <img
@@ -69,10 +83,19 @@ export default function InputField({
                       ? "./assets/eye-closed.svg"
                       : "./assets/eye.svg"
                   }
-                  width="25px"
+                  width="20px"
                   alt="pswd"
                 />
               </div>
+            ) : (
+              showCopyIcon && (
+                <div
+                  className="cursor-pointer bg-gray-200 rounded-e-md absolute top-0 right-0 px-2 py-2 hover:bg-gray-100"
+                  onClick={() => copyToClipboard(value)}
+                >
+                  <img src="./assets/copy.svg" width="20px" alt="copy" />
+                </div>
+              )
             )}
             <Error error={error} />
           </div>

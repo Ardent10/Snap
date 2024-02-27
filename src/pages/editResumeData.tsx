@@ -25,6 +25,7 @@ export default function EditResumeData() {
               name="firstName"
               id="firstName"
               placeholder="Enter your first name"
+              showCopyIcon
               required={true}
             />
             <InputField
@@ -34,6 +35,7 @@ export default function EditResumeData() {
               name="lastName"
               id="email"
               placeholder="Enter your last name"
+              showCopyIcon
               required={true}
             />
           </div>
@@ -45,6 +47,7 @@ export default function EditResumeData() {
               name="email"
               id="email"
               placeholder="Enter your email"
+              showCopyIcon
               required={true}
             />
             <InputField
@@ -54,6 +57,7 @@ export default function EditResumeData() {
               name="phoneNumber"
               id="phoneNumber"
               placeholder="Phone Number"
+              showCopyIcon
               required={true}
             />
           </div>
@@ -68,6 +72,7 @@ export default function EditResumeData() {
               name="address1"
               id="address1"
               placeholder="Enter your address Line 1"
+              showCopyIcon
               required={true}
             />
             <InputField
@@ -77,6 +82,7 @@ export default function EditResumeData() {
               name="address2"
               id="address2"
               placeholder="Enter your address Line 1"
+              showCopyIcon
             />
           </div>
           <div className="flex space-x-4">
@@ -87,6 +93,7 @@ export default function EditResumeData() {
               name="city"
               id="city"
               placeholder="Enter your city"
+              showCopyIcon
               required={true}
             />
             <InputField
@@ -96,6 +103,7 @@ export default function EditResumeData() {
               name="state"
               id="state"
               placeholder="Enter your state"
+              showCopyIcon
               required={true}
             />
           </div>
@@ -107,6 +115,7 @@ export default function EditResumeData() {
               name="country"
               id="country"
               placeholder="Enter your country"
+              showCopyIcon
               required={true}
             />
             <InputField
@@ -116,6 +125,7 @@ export default function EditResumeData() {
               name="pincode"
               id="pincode"
               placeholder="Enter your pincode"
+              showCopyIcon
               required={true}
             />
           </div>
@@ -130,6 +140,7 @@ export default function EditResumeData() {
               id="jobTitle"
               type="text"
               placeholder="Enter your job title"
+              showCopyIcon
               required={true}
             />
           </div>
@@ -141,6 +152,7 @@ export default function EditResumeData() {
               name="company"
               id="company"
               placeholder="Enter your company"
+              showCopyIcon
               required={true}
             />
             <InputField
@@ -150,6 +162,7 @@ export default function EditResumeData() {
               name="location"
               id="location"
               placeholder="Enter your location"
+              showCopyIcon
               required={true}
             />
           </div>
@@ -161,6 +174,7 @@ export default function EditResumeData() {
               name="workFrom"
               id="workFrom"
               placeholder="Enter your work from date"
+              showCopyIcon
               required={true}
             />
             <InputField
@@ -170,6 +184,7 @@ export default function EditResumeData() {
               name="workTo"
               id="workTo"
               placeholder="Enter your work to date"
+              showCopyIcon
               required={true}
             />
           </div>
@@ -193,6 +208,7 @@ export default function EditResumeData() {
               name="schoolOrUniversity"
               id="schoolOrUniversity"
               placeholder="Enter your school or university"
+              showCopyIcon
               required={true}
             />
           </div>
@@ -204,6 +220,7 @@ export default function EditResumeData() {
               name="educationFrom"
               id="educationFrom"
               placeholder="Enter your education from date"
+              showCopyIcon
               required={true}
             />
             <InputField
@@ -213,6 +230,7 @@ export default function EditResumeData() {
               name="educationTo"
               id="educationTo"
               placeholder="Enter your education to date"
+              showCopyIcon
               required={true}
             />
           </div>
@@ -224,6 +242,7 @@ export default function EditResumeData() {
               name="degree"
               id="degree"
               placeholder="Enter your degree"
+              showCopyIcon
               required={true}
             />
             <InputField
@@ -233,6 +252,7 @@ export default function EditResumeData() {
               name="overallResult"
               id="overallResult"
               placeholder="Enter your overall result (GPA)"
+              showCopyIcon
               required={true}
             />
           </div>
@@ -248,6 +268,7 @@ export default function EditResumeData() {
               name="skills"
               id="skills"
               placeholder="Enter your skills"
+              showCopyIcon
               required={true}
             />
           </div>
@@ -263,6 +284,7 @@ export default function EditResumeData() {
                 name="website"
                 id="websites"
                 placeholder="Enter your websites"
+                showCopyIcon
                 required={true}
               />
             </div>
@@ -274,6 +296,7 @@ export default function EditResumeData() {
                 name="linkedInUrl"
                 id="linkedin"
                 placeholder="Enter your LinkedIn URL"
+                showCopyIcon
                 required={true}
               />
             </div>
@@ -285,6 +308,7 @@ export default function EditResumeData() {
                 name="github"
                 id="linkedInUrl"
                 placeholder="Enter your LinkedIn URL"
+                showCopyIcon
                 required={true}
               />
             </div>
@@ -296,6 +320,7 @@ export default function EditResumeData() {
                 name="twitter"
                 id="linkedInUrl"
                 placeholder="Enter your LinkedIn URL"
+                showCopyIcon
                 required={true}
               />
             </div>
